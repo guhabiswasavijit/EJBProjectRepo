@@ -1,0 +1,22 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="PayTm" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:jboss/datasources/OracleDS</jta-data-source>
+        <class>org.example.PayTmTransaction</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="eclipselink.logging.file" value="X:\\workspace\\LOGS\\paytm.log" />
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.logging.timestamp" value="true" />
+            <property name="eclipselink.logging.thread" value="true" />
+            <property name="eclipselink.logging.session" value="true" />
+            <property name="eclipselink.logging.exceptions" value="true" />
+            <property name="eclipselink.logging.connection" value="true" />
+            <property name="eclipselink.logging.level.metadata" value="WARNING"></property>
+        </properties>
+    </persistence-unit>
+</persistence>
